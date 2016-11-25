@@ -1,0 +1,60 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/MovieDetailTheme.Vertical"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        tools:context=".DetailActivityFragment"
+        tools:showIn="@layout/activity_detail">
+
+        <LinearLayout
+            style="@style/MovieDetailTheme.Horizontal"
+            android:background="@color/colorTitleBackground"
+            android:layout_weight="2">
+            <TextView
+                android:id="@+id/original_title"
+                style="@style/DetailViewTheme"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/padding"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/medium_title_size"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/MovieDetailTheme.Horizontal"
+            android:padding="@dimen/padding"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/movie_detail_thumbnail"
+                style="@style/DetailViewTheme"
+                android:paddingLeft="@dimen/padding_left"
+                android:paddingRight="@dimen/padding_right"/>
+            <LinearLayout
+                style="@style/MovieDetailTheme.Vertical">
+                <TextView
+                    android:id="@+id/release_date"
+                    style="@style/DetailViewTheme"
+                    android:textSize="@dimen/medium_subheading_size"/>
+                <TextView
+                    android:id="@+id/user_reviews"
+                    style="@style/DetailViewTheme"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textStyle="italic"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MovieDetailTheme.Vertical"
+            android:layout_weight="2"
+            android:padding="@dimen/padding">
+            <TextView
+                android:id="@+id/overview"
+                style="@style/DetailViewTheme"
+                android:textSize="@dimen/medium_text_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
